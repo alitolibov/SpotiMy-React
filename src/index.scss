@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homeLogo {
+  background-image: url("../public/HomeLogo.png");
+}
+.searchLogo {
+  background-image: url("../public/SearchLogo.png");
+}
+.libraryLogo {
+  background-image: url("../public/LibraryLogo.png");
+}
+.plusLogo {
+  background-image: url("../public/+LibraryLogo.png");
+}
+.likedLogo {
+  background-image: url("../public/Liked\ SongsLogo.png");
+}
+.active:nth-child(1) div {
+  background-image: url("../public/HomeFillLogo.png");
+}
+.active:nth-child(2) div {
+  background-image: url("../public/SearchFillLogo.png");
+}
+.active:nth-child(3) div {
+  background-image: url("../public/Liked\ SongsLogo.png");
+}
+.itemscenter{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.itemscenter2{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  position: absolute;
+}
+
+.active p {
+   color: white;
+}
+.line{
+  border-bottom: 1px solid rgb(217, 218, 220);
+  text-align: center;
+  width: 100%;
+}
+
+.hovercont {
+  transition: 0.3s;
+   overflow: unset;
+   z-index: 0;
+   overflow: hidden;
+  &:hover .playhover {
+    opacity: 1;
+    bottom: 10px;
+  }
+
+  .linear {
+    background: linear-gradient(134.97deg, #3822ea 3.13%, #a3a6e5 100%);
+  }
+  .playhover{
+    bottom: -20px;
+    opacity: 0;
+    right: 0;
+    transition: 0.3s;
+}
+}
+.hovercontwo {
+   transition: 0.3s;
+   padding: 20px;
+   cursor: pointer;
+    
+   &:hover .playhovertwo {
+     opacity: 1;
+     bottom: 0px;
+   }
+ 
+   .playhovertwo{
+     bottom: -20px;
+     opacity: 0;
+     right: 0;
+     transition: 0.3s;
+   }
+ }
+ .shadowbox{
+   filter: drop-shadow(0px 0px 24px rgba(0, 0, 0, 0.25));
+ }
+
+
+
+.reactIcon {
+  position: relative;
+  top: -55px;
+  right: 8px;
+  // padding-top: 20px;
+}
+
+.forHv:hover .forHv2 {
+  display: block;
+}
+
+.forTr {
+  transition: 0.5s ease;
+}
+
+
+.grid-block {
+   height: 82px;
+   border-radius: 6px;
+   background: #FFFFFF10;
+   display: flex;
+   align-items: center;
+   gap: 21px;
+   cursor: pointer;
+   transition: 500ms;
+   
+   &:hover{
+   background: #FFFFFF40;
+   }
+
+   .grid-img {
+      width: 82px;
+      height: 82px;
+      background-image: url("../public/chillmix.png");
+      background-size: cover;
+      opacity: 1;
+   }
+
+   .grid-text {
+      font-family: 'Manrope';
+      font-size: 20px;
+      color: white;
+      font-weight: bold;
+   }
+}
+.secondgrid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	width: 100%;
+	grid-gap: 27px;
+}
+
+
+
+
+.swiper-button-next:after{
+   background-image: url(../public/img/swiperNext.png);
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   color: transparent;
+   font-size: 100px;
+   position: absolute;
+   right: 10px !important;
+   cursor: pointer;
+   transition: 0.3s ease !important;
+
+}
+.swiper-button-prev:after{
+   background-image: url(../public/img/swiperprev.png);
+   background-position: center;
+   background-size: 100%;
+   background-repeat: no-repeat;
+   color: transparent;
+   font-size: 100px;
+   position: absolute;
+   cursor: pointer;
+   left: 10px !important;
+   transition: 0.3s ease !important;
+
+}
+.swiper-button-disabled{
+   opacity: 0 !important;
+}
+.inpSearch{
+   display: flex;
+}
+.inp{
+   all: unset;
+   width: 85%;
+   outline: 0;
+   height: 100%;
+   &::placeholder {
+      color: #757575;
+      font-size: 18px;
+   }
+   color: #757575;
+}
+.inp2{
+  all: unset;
+  width: 85%;
+  height: 100%;
+  &::placeholder {
+     color: #B7B7B7FF;
+     font-size: 18px;
+  }
+  color: #B7B7B7FF;
+}
+.count{
+   font-family: 'Manrope';
+   font-weight: 600;
+	 font-size: 16px;
+	 color: #B3B3B3;
+   text-align: center;;
+}
+.selectPh{
+  box-shadow: 0px 8px 30px #505050FF;
+  &:hover .selectPhitem{
+    opacity:1;
+  }
+}
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  width: 600px;
+  height: 450px;
+  border-radius: 18px;
+  background-color: #282828FF;
+  padding: 25px;
+  z-index: 2;
+  display: none;
+
+}
+.modal_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.32);
+  z-index: 1;
+  display: none;
+}
+.log-in{
+  text-align: center;
+}
+.changeImg{
+  // opacity: 0;
+
+}
