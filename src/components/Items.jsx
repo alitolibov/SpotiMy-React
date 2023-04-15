@@ -72,8 +72,8 @@ const Items = ({ name, img, id }) => {
   }, [prevMusic]);
 
   return (
-    <div className="grid-block relative hovercont  overflow-hidden ">
-      <Link to={`/playlist/${id}`} className="grid-block" state={{ img }}>
+    <div className="grid-block relative hovercont overflow-hidden ">
+      <Link to={`/playlist/${id}`} className="grid-block w-full" state={{ img }}>
         <div
           className="grid-img shadowbox"
           style={{ backgroundImage: `url(${img})` }}
